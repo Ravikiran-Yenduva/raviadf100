@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_job",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "raviadf100_src_AzureFileStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "copied",
+				"folderPath": "Target"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
