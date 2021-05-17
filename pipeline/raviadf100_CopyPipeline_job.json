@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Copy_job",
+				"description": "new feature---2",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
