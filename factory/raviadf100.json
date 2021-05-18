@@ -1,9 +1,9 @@
 {
 	"name": "raviadf100",
-	"location": "westus",
+	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
-		"principalId": "4d8f2183-54cf-4fe4-8466-dedb98262ff9",
+		"principalId": "473819a1-e55e-4ce1-925d-691dfc1fd4a3",
 		"tenantId": "3617ef9b-98b4-40d9-ba43-e1ed6709cf0d"
 	}
 }
