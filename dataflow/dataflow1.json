@@ -13,8 +13,12 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
-			"script": "source(output(\n\t\tEmpID as string,\n\t\tEmpName as string,\n\t\tDepartment as string,\n\t\tLocation as string,\n\t\tSalary as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1"
+			"transformations": [
+				{
+					"name": "Select1"
+				}
+			],
+			"script": "source(output(\n\t\tEmpID as string,\n\t\tEmpName as string,\n\t\tDepartment as string,\n\t\tLocation as string,\n\t\tSalary as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 select(mapColumn(\n\t\tEmpID,\n\t\t{Test Empname} = EmpID,\n\t\tEmpName,\n\t\tDepartment,\n\t\tLocation,\n\t\tSalary\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
 		}
 	}
 }
